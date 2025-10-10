@@ -1,0 +1,53 @@
+{
+  "name": "capture-jmeter-report",
+  "version": "0.1.0",
+  "description": "Cross-platform JMeter report analyzer",
+  "main": "capture-jmeter-report.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/index.js --help",
+    "example-best": "node src/index.js -l ./968_verify_digital_email_1 -o ./test_results -t b",
+    "example-worst": "node src/index.js -l ./968_verify_digital_email_1 -o ./test_results -t w",
+    "example-best-individual": "node src/index.js -l ./968_verify_digital_email_1 -o ./test_results -t bi -v 1000",
+    "help": "node src/index.js --help",
+    "build": "pkg . --out-path dist",
+    "build:all": "pkg . --targets node18-macos-arm64,node18-macos-x64,node18-linux-x64,node18-win-x64 --out-path dist",
+    "build:macos": "pkg . --targets node18-macos-arm64,node18-macos-x64 --out-path dist",
+    "build:windows": "pkg . --targets node18-win-x64 --out-path dist",
+    "build:linux": "pkg . --targets node18-linux-x64 --out-path dist"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
+    "path": "^0.12.7",
+    "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "bin": {
+    "capture-jmeter-report": "./src/index.js"
+  },
+  "keywords": [
+    "jmeter",
+    "performance",
+    "testing",
+    "report",
+    "analyzer",
+    "cross-platform"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "scripts": "capture-jmeter-report.js",
+    "assets": [
+      "node_modules/playwright/**/*"
+    ],
+    "outputPath": "dist"
+  }
+}
