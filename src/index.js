@@ -28,7 +28,8 @@ class JMeterReportAnalyzer {
         
         try {
             // Use glob to find directories containing the folder name
-            const pattern = path.join(this.searchLocation, '**', `*${folderName}*`);
+            // Use forward slashes for glob patterns (works on all platforms)
+            const pattern = path.join(this.searchLocation, '**', `*${folderName}*`).replace(/\\/g, '/');
             console.log(`Searching for folders matching: ${pattern} and Folder Name: ${folderName}`);
             const items = await glob(pattern, { onlyDirectories: true });
             
