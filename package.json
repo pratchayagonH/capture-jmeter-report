@@ -40,14 +40,15 @@
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "pkg": "^5.8.1"
-  },
   "pkg": {
-    "scripts": "capture-jmeter-report.js",
-    "assets": [
-      "node_modules/playwright/**/*"
-    ],
-    "outputPath": "dist"
+    "scripts": "src/index.js",
+    "assets": [],
+    "outputPath": "dist",
+    "targets": [
+      "node18"
+    ]
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.8.0"
   }
 }
