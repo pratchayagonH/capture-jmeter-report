@@ -2,7 +2,11 @@
   "name": "capture-jmeter-report",
   "version": "0.1.0",
   "description": "Cross-platform JMeter report analyzer",
-  "main": "capture-jmeter-report.js",
+  "main": "src/lib.js",
+  "exports": {
+    ".": "./src/lib.js",
+    "./cli": "./src/index.js"
+  },
   "scripts": {
     "start": "node src/index.js",
     "test": "node src/index.js --help",
