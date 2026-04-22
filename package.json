@@ -2,11 +2,7 @@
   "name": "capture-jmeter-report",
   "version": "0.1.0",
   "description": "Cross-platform JMeter report analyzer",
-  "main": "src/lib.js",
-  "exports": {
-    ".": "./src/lib.js",
-    "./cli": "./src/index.js"
-  },
+  "main": "capture-jmeter-report.js",
   "scripts": {
     "start": "node src/index.js",
     "test": "node src/index.js --help",
@@ -44,15 +40,14 @@
   ],
   "author": "",
   "license": "MIT",
-  "pkg": {
-    "scripts": "src/index.js",
-    "assets": [],
-    "outputPath": "dist",
-    "targets": [
-      "node18"
-    ]
-  },
   "devDependencies": {
-    "@yao-pkg/pkg": "^6.8.0"
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "scripts": "capture-jmeter-report.js",
+    "assets": [
+      "node_modules/playwright/**/*"
+    ],
+    "outputPath": "dist"
   }
 }

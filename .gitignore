@@ -1,6 +1,9 @@
 node_modules/
-package-lock.json
-
 dist/
-
-node
+build/
+.env
+.DS_Store
+968_verify_digital_email_1_R1
+968_verify_digital_email_1_R2
+968_verify_digital_email_1_R3
+test_results

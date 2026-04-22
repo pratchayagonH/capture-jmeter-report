@@ -58,25 +58,6 @@ npm run build:linux      # Linux x64
 node src/index.js -l <search-location> -o <output-path> [options]
 ```
 
-### Programmatic Usage
-
-```js
-const { captureReport } = require('capture-jmeter-report');
-
-async function run() {
-  const summary = await captureReport({
-    location: './968_verify_digital_email_1_R1',
-    output: './results',
-    type: 'b',
-    threshold: 1200
-  });
-
-  console.log(summary.outputDir);
-}
-
-run().catch(console.error);
-```
-
 ### Options
 
 | Option | Description | Required | Default |
